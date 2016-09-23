@@ -1,11 +1,11 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -16,112 +16,56 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
-import member.Member;
-
+import bean.Member;
 public class DaoMember {
 	private JdbcTemplate jdbcTemplate;
 
 	public DaoMember(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
-
-	public Member selectById(Long memId) {
+	public Member selectById(String id) {
 		List<Member> results = jdbcTemplate.query(
 				"select * from MEMBER where id = ?", 
 				new RowMapper<Member>() {
 			public Member mapRow(ResultSet rs, int rowNum) 
 					throws SQLException {
-				Member member = new Member(rs.getString("EMAIL"), 
-						rs.getString("PASSWORD"), rs.getString("NAME"),
-						rs.getTimestamp("REGDATE"));
-				member.setId(rs.getLong("ID"));
+				Member member = new Member(rs.getString("id"), rs.getString("password"), rs.getString("name"),
+						rs.getString("phone"), rs.getDate("regdate"));
+				member.setId(rs.getString("ID"));
 				return member;
 			}
-		}, memId);
+		}, id);
 
 		return results.isEmpty() ? null : results.get(0);
 	}
-	public Member selectByEmail(String email) {
-		List<Member> results = jdbcTemplate.query(
-				"select * from MEMBER where EMAIL = ?", 
-				new RowMapper<Member>() {
-			public Member mapRow(ResultSet rs, int rowNum) 
-					throws SQLException {
-				Member member = new Member(rs.getString("EMAIL"), 
-						rs.getString("PASSWORD"), rs.getString("NAME"),
-						rs.getTimestamp("REGDATE"));
-				member.setId(rs.getLong("ID"));
-				return member;
-			}
-		}, email);
-
-		return results.isEmpty() ? null : results.get(0);
-	}
-	public List<Member> selectByRegdate(Date from, Date to) {
-		List<Member> results = jdbcTemplate.query(
-			"select * from MEMBER where REGDATE between ? and ? "
-			+ "order by REGDATE desc ", 
-			new RowMapper<Member>() {
-			public Member mapRow(ResultSet rs, int rowNum) 
-					throws SQLException {
-				Member member = new Member(rs.getString("EMAIL"), 
-					rs.getString("PASSWORD"), rs.getString("NAME"),
-					rs.getTimestamp("REGDATE"));
-				member.setId(rs.getLong("ID"));
-				return member;
-			}
-		}, from, to);
-		return results;
-	}
+	//회원 정보 전체 select
 
 	public void insert(final Member member) {
-		KeyHolder keyHolder = new GeneratedKeyHolder();
 		jdbcTemplate.update(new PreparedStatementCreator() {
 			public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
 				PreparedStatement pstmt = con.prepareStatement(
-						"insert into MEMBER (EMAIL, PASSWORD, NAME, REGDATE) " + "values (?, ?, ?, ?)",
-						new String[] { "ID" });
-				pstmt.setString(1, member.getEmail());
+						"insert into MEMBER (id, password, name, phone, payment, regdate, email) values (?, ?, ?, ?, ?, ?, ?)",
+						new String[] { "id" });
+				pstmt.setString(1, member.getId());
 				pstmt.setString(2, member.getPassword());
 				pstmt.setString(3, member.getName());
-				pstmt.setTimestamp(4, new Timestamp(member.getRegisterDate().getTime()));
+				pstmt.setString(4, member.getPhone());
+				pstmt.setString(5, member.getPayment());
+				pstmt.setTimestamp(6, new Timestamp(member.getRegdate().getTime()));
+				pstmt.setString(7, member.getEmail());
+				
 				return pstmt;
 			}
-		}, keyHolder);
-		Number keyValue = keyHolder.getKey();
-		member.setId(keyValue.longValue());
-	}
-
-	public void update(Member member) {
-		jdbcTemplate.update("update MEMBER set NAME = ?, PASSWORD = ? "
-				+ "where EMAIL = ?", 
-				member.getName(),
-				member.getPassword(), member.getEmail());
-	}
-
-	public List<Member> selectAll() {
-		System.out.print("----- selectAll ");
-		int total = count();
-		System.out.println("전체 데이터: " + total);
-		List<Member> results = jdbcTemplate.query("select * from MEMBER", new RowMapper<Member>() {
-			public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
-				Member member = new Member(rs.getString("EMAIL"), rs.getString("PASSWORD"), rs.getString("NAME"),
-						rs.getTimestamp("REGDATE"));
-				member.setId(rs.getLong("ID"));
-				return member;
-			}
 		});
-		return results;
 	}
-
-	public int count() {
-		Integer count = jdbcTemplate.queryForObject("select count(*) from MEMBER", Integer.class);
-		return count;
+	//회원가입
+	public void update(Member member) {
+		jdbcTemplate.update("update MEMBER set password = ?, name = ?, phone = ?, payment = ?, email = ? where id = ?", 
+				member.getPassword(), member.getName(), member.getPhone(), member.getPayment(), member.getEmail(), member.getId());
 	}
+	//회원정보수정
 	public void mDelete(Member member) {
-		jdbcTemplate.update(
-				"delete from MEMBER where EMAIL = ?", 
-				member.getEmail());
+		jdbcTemplate.update("delete from MEMBER where id = ?", member.getId());
 	}
-
+	//탈퇴
 }
