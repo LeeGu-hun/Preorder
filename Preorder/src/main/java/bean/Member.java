@@ -7,12 +7,13 @@ public class Member {
 	private String id, password, name, phone, payment, email;
 	private Date regdate;
 	
-	public Member(String id, String password, String name, String phone, Date regdate) {
+	public Member(String id, String password, String name, String phone, Date regdate, String email) {
 		this.id = id;
 		this.password = password;
 		this.name = name;
 		this.phone = phone;
 		this.regdate = regdate;
+		this.email = email;
 	}
 	public Date getRegdate() {
 		return regdate;

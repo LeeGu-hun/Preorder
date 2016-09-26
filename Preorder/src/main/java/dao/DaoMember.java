@@ -30,7 +30,7 @@ public class DaoMember {
 			public Member mapRow(ResultSet rs, int rowNum) 
 					throws SQLException {
 				Member member = new Member(rs.getString("id"), rs.getString("password"), rs.getString("name"),
-						rs.getString("phone"), rs.getDate("regdate"));
+						rs.getString("phone"), rs.getDate("regdate"), rs.getString("email"));
 				member.setId(rs.getString("ID"));
 				return member;
 			}
@@ -44,7 +44,7 @@ public class DaoMember {
 		jdbcTemplate.update(new PreparedStatementCreator() {
 			public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
 				PreparedStatement pstmt = con.prepareStatement(
-						"insert into MEMBER (id, password, name, phone, payment, regdate, email) values (?, ?, ?, ?, ?, ?, ?)",
+						"insert into MEMBER (num, id, password, name, phone, payment, regdate, email) values (member_num.nextval, ?, ?, ?, ?, ?, ?, ?)",
 						new String[] { "id" });
 				pstmt.setString(1, member.getId());
 				pstmt.setString(2, member.getPassword());
