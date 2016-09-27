@@ -10,9 +10,9 @@
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
-  		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />
 		<property name="jdbcUrl"
-			value="jdbc:mysql://192.168.0.45:3306/db7?characterEncoding=utf8" />
+			value="jdbc:oracle:thin:@192.168.0.167:1521:xe" />
 		<property name="user" value="db7" />
 		<property name="password" value="1234" />
 	</bean>

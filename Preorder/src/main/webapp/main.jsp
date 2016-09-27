@@ -8,11 +8,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Welcome</title>
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/media-queries.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/reset.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/main.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/reset.css" />
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/style.css" />
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/media-queries.css" />
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 </head> 
-<body>
 	<%@include file="/include/header.jsp"%>
 	<c:if test="${empty authInfo }">
 		<%@include file="/dirMem/join.jsp"%>
@@ -21,5 +29,6 @@
 		<%@include file="/dirBoard/myList.jsp"%>
 	</c:if>
 	<%@include file="/include/footer.jsp"%>
+	asdfasdfasdfasdfasd
 </body>
 </html>

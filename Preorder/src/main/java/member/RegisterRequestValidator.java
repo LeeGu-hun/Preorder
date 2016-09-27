@@ -28,6 +28,7 @@ public class RegisterRequestValidator implements Validator {
 			errors.rejectValue("email", "required");
 		} else {
 			Matcher matcher = pattern.matcher(regReq.getId());
+			System.out.println(matcher);
 			if (!matcher.matches()) {
 				errors.rejectValue("email", "bad");
 			}

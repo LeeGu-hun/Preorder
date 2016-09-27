@@ -12,6 +12,8 @@
 <title>Onextrapixel - Responsive Web Design Template</title>
 
 <link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/main.css" />
+<link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/css/reset.css" />
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/css/style.css" />
@@ -21,9 +23,6 @@
 	href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!-- 부가적인 테마 -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
 
 
@@ -53,6 +52,7 @@
 </head> 
 
 <body id="home">
+마이리스트
 
 	<div id="wrapper">
 
@@ -223,7 +223,7 @@
 			<p>&copy; 2011 - Responsive Website Template</p>
 		</footer>
 
-	</div>
+	</div>          
 	<!-- END Wrapper -->
 
 	<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
