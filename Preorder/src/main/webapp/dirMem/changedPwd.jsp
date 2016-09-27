@@ -12,7 +12,7 @@
 	href="<%=request.getContextPath()%>/css/reset.css" />
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/css/main.css" />
-</head>
+</head> 
 <body>
 	<%@include file="/include/header.jsp"%>
 	<div id="box">

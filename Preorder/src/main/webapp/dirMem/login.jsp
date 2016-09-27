@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="/prj/css/reset.css" />
 <link rel="stylesheet" type="text/css" href="/prj/css/main.css" />
 </head>
-<body>
+<body> 
 	<%@include file="/include/header.jsp"%>
 	<div id="box">
 		<div id="boxTable">

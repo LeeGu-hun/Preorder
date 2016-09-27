@@ -4,10 +4,19 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean class="controller.ControllerLogin">		
+	<bean class="controller.ControllerLogin">
+		<property name="authService" ref="authService" /> 
+		<property name="memberRegisterService" ref="memberRegSvc" />
 	</bean>
 	
-	
-	
-	
+	<bean class="controller.ControllerMember">
+		<property name="daoMember" ref="daoMember" />
+		<property name="authService" ref="authService" />
+		<property name="changePasswordService" ref="changePwdSvc" />
+		<property name="memberRegisterService" ref="memberRegSvc" />
+	</bean>
+
+
+
+
 </beans> 

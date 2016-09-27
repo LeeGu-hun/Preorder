@@ -8,7 +8,7 @@
 		<h1>가입하기</h1>
 		<div id="join"></div>
 		<form:form commandName="registerRequest" action="member/regist" style="visibility:hidden;">
-		<p>
+		<p> 
 			<label>Email:<br>
 			<form:input path="email" class="txt"  />
 			<form:errors path="email" /> </label>

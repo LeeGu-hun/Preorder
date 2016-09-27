@@ -2,6 +2,8 @@ package bean;
 
 import java.util.Date;
 
+import exception.IdPasswordNotMatchingException;
+
 public class Member {
 
 	private String id, password, name, phone, payment, email;
@@ -56,5 +58,13 @@ public class Member {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public void changePassword(String oldPassword, String newPassword) {
+		if (!password.equals(oldPassword))
+			throw new IdPasswordNotMatchingException();
+		this.password = newPassword;
+	}
+	public boolean matchPassword(String pw) {
+		return (password.equals(pw)) ? true : false;
 	}
 }
