@@ -15,6 +15,9 @@
 		<property name="changePasswordService" ref="changePwdSvc" />
 		<property name="memberRegisterService" ref="memberRegSvc" />
 	</bean>
+	<bean class="controller.ControllerBoard">
+	
+	</bean>
 
 
 

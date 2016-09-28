@@ -34,56 +34,31 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 <script>
-	var cnt = 0;
-	function openLayer() {
-		$('#joinOpen').css('visibility', 'visible');
-		$('#joinOpen').css('position', 'relative');
-		cnt++;
-		if (cnt > 0)
-			$('#joinOpen').toggle();
-
-	}
+ 	
+	function openLayer() {	$('#contents').toggle();	}
 </script>
 </head>
 
 <body id="home">
-	마이리스트
+	
 
 	<div id="wrapper">
 
-		<header>
-			<h1>
-				<a href="main">Pre Order</a>
-			</h1>
-			<h2>
-				<form role="form">
-					<div class="row">
-						<div class="form-group col-md-5 col-sm-6">
-							<label for="user_login" class="sr-only">id</label> <input
-								type="text" id="user_login" class="form-control"
-								placeholder="id">
+		
 
-						</div>
-						<div class="form-group col-md-4 col-sm-6">
-							<label for="user_pass" class="sr-only">password</label> <input
-								type="password" id="user_pass" class="form-control"
-								placeholder="password">
+			
 
-						</div>
-						<div class="form-group col-md-2 col-sm-12">
-							<input type="submit" id="wp-submit"
-								class="btn btn-info btn-block" value="로그인">
-						</div>
-						<input type="button" id="wp-join" class="btn btn-info btn-block"
-							value="회원가입" onclick="openLayer();">
-				</form>
-			</h2>
+			<!--★★★ 회원가입 만들어 봄 ★★★★★★  -->
+			<!-- 회원가입 폼 : S -->
 
-			<div id="contents">
+		<input type="button" id="wp-join" class="btn btn-info btn-block" 
+		value="회원가입" onclick="openLayer();" >
+		<div id="contents" style="display:none;">
+		
 
 				<div id="mainRight">
 					<div id="rightWrap" style="padding-left: 300px;">
-						<h1>가입하기</h1>
+						<button>일반회원 가입하기</button>
 						<div id="join"></div>
 						<form:form commandName="registerRequest" action="member/regist">
 							<p>
@@ -116,18 +91,17 @@
 						</form:form>
 					</div>
 				</div>
+				<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 			</div>
-
-			<!--★★★ 회원가입 만들어 봄 ★★★★★★  -->
-			<!-- 회원가입 폼 : S -->
-
-
-
-			<nav>
+			</h2>
+				<nav>
 				<a href="#">Home</a> <a href="#">About</a> <a href="#">Portfolio</a>
 				<a href="#">Blog</a> <a href="#">Contact</a>
 				<div class="clearfix"></div>
 			</nav>
+
+		
 		</header>
 
 		<section id="main-content">

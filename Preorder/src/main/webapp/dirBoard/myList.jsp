@@ -11,18 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Onextrapixel - Responsive Web Design Template</title>
 
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/css/main.css" />
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/css/reset.css" />
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/css/style.css" />
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/css/media-queries.css" />
-<link rel="stylesheet"
-	href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 
 
 
@@ -49,68 +38,20 @@
 
 	}
 </script>
-</head> 
+</head>
 
 <body id="home">
-마이리스트
+
 
 	<div id="wrapper">
 
 		<header>
-			<h1>
-				<a href="main">Pre Order</a>
-			</h1>
-			<h2>
-				<form role="form">
-					<div class="row">
-						<div class="form-group col-md-5 col-sm-6">
-							<label for="user_login" class="sr-only">id</label> <input
-								type="text" id="user_login" class="form-control"
-								placeholder="id">
+			
 
-						</div>
-						<div class="form-group col-md-4 col-sm-6">
-							<label for="user_pass" class="sr-only">password</label> <input
-								type="password" id="user_pass" class="form-control"
-								placeholder="password">
 
-						</div>
-						<div class="form-group col-md-2 col-sm-12">
-							<input type="submit" id="wp-submit"
-								class="btn btn-info btn-block" value="로그인">
-						</div>
-						<input type="button" id="wp-join" class="btn btn-info btn-block"
-							value="회원가입" onclick="openLayer();">
-				</form>
-				</h2>
-				
-				<form:form commandName="registerRequest" action="member/regist">
-		<p>
-			<label>Email:<br>
-			<form:input path="email" class="txt"  />
-			<form:errors path="email" /> </label>
-		</p>
-		<p>
-			<label>이름:<br>
-			<form:input path="name" class="txt" />
-			<form:errors path="name" /> </label>
-		</p>
-		<p>
-			<label>비번:<br>
-			<form:password path="password" class="txt" />
-			<form:errors path="password" /> </label>
-		</p> 
-		<p>
-			<label>확인:<br>
-			<form:password path="confirmPassword" class="txt" />
-			<form:errors path="confirmPassword" />
-			</label>
-		</p>
-		<input type="submit" value="회원가입" class="btn"/>
-	</form:form>
-				
-				<!--★★★ 회원가입 만들어 봄 ★★★★★★  -->
-				<!-- 회원가입 폼 : S -->
+
+			<!--★★★ 회원가입 만들어 봄 ★★★★★★  -->
+			<!-- 회원가입 폼 : S -->
 
 			
 
@@ -223,7 +164,7 @@
 			<p>&copy; 2011 - Responsive Website Template</p>
 		</footer>
 
-	</div>          
+	</div>
 	<!-- END Wrapper -->
 
 	<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>

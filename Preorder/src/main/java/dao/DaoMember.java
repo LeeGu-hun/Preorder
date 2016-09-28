@@ -44,7 +44,7 @@ public class DaoMember {
 		jdbcTemplate.update(new PreparedStatementCreator() {
 			public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
 				PreparedStatement pstmt = con.prepareStatement(
-						"insert into MEMBER (num, id, password, name, phone, payment, regdate, email) values (member_num.nextval, ?, ?, ?, ?, ?)");
+						"insert into MEMBER (num, id, password, name, phone, payment, regdate, email) values (member_num.nextval, ?, ?, ?, ?, ?,?,?)");
 				pstmt.setString(1, member.getId());
 				pstmt.setString(2, member.getPassword());
 				pstmt.setString(3, member.getName());

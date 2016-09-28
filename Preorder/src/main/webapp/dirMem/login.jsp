@@ -29,9 +29,9 @@
 				<form:form commandName="loginCommand" id="loginFrm">
 				<form:errors />
 					<p>
-						<label>이&nbsp;&nbsp;메&nbsp;&nbsp;일 :
-						<form:input path="email" /><br>
-						<form:errors path="email" /><br>
+						<label>ID :
+						<form:input path="id" /><br>
+						<form:errors path="id" /><br>
 						</label>
 					</p>
 					<p>
@@ -41,9 +41,9 @@
 						</label>
 					</p>
 					<p>
-						<label>E-mail 기억 : 
-						<form:checkbox path="rememberEmail" />
-						<form:errors path="rememberEmail" />
+						<label>ID 기억 : 
+						<form:checkbox path="rememberId" />
+						<form:errors path="rememberId" />
 						</label>
 					</p>
 					<input type="submit" value="로 그 인">

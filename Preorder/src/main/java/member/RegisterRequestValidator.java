@@ -24,11 +24,11 @@ public class RegisterRequestValidator implements Validator {
 	@Override
 	public void validate(Object target, Errors errors) {
 		RegisterRequest regReq = (RegisterRequest) target;
-		if (regReq.getId() == null || regReq.getId().trim().isEmpty()) {
+		if (regReq.getEmail() == null || regReq.getEmail().trim().isEmpty()) {
 			errors.rejectValue("email", "required");
 		} else {
-			Matcher matcher = pattern.matcher(regReq.getId());
-			System.out.println(matcher);
+			Matcher matcher = pattern.matcher(regReq.getEmail());
+			System.out.println(regReq.getEmail());
 			if (!matcher.matches()) {
 				errors.rejectValue("email", "bad");
 			}

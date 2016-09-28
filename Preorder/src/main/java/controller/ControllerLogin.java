@@ -39,7 +39,7 @@ public class ControllerLogin {
 
 	@RequestMapping("/")
 	public String homepage2(RegisterRequest rr, Errors errors, Model model) {
-		if (rr.getEmail() != null && !rr.getEmail().equals("")) {
+		if (rr.getId() != null && !rr.getId().equals("")) {
 			new RegisterRequestValidator().validate(rr, errors);
 			if (errors.hasErrors())
 				return "main";
@@ -60,19 +60,20 @@ public class ControllerLogin {
 	public String form(LoginCommand loginCommand,
 			@CookieValue(value = "REMEMBER", required = false) Cookie rCookie) {
 		if (rCookie != null) {
-			loginCommand.setEmail(rCookie.getValue());
-			loginCommand.setRememberEmail(true);
+			loginCommand.setId(rCookie.getValue());
+			/*System.out.println(rCookie.getValue());*/
+			loginCommand.setRememberId(true);
 		}
 		return "dirMem/login";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String form(LoginCommand loginCommand, Errors errors,
-			
+	public String form(LoginCommand loginCommand, Errors errors,			
 			HttpSession session, HttpServletResponse response) {
 		new LoginCommandValidator().validate(loginCommand, errors);
 		if (errors.hasErrors()) {
 			return "dirMem/login";
+		
 		}
 		try {
 			AuthInfo authInfo = authService.authenticate(
@@ -80,9 +81,9 @@ public class ControllerLogin {
 			session.setAttribute("authInfo", authInfo);
 
 			Cookie rememberCookie = new Cookie("REMEMBER",
-					loginCommand.getEmail());
+					loginCommand.getId());
 			rememberCookie.setPath("/");
-			if (loginCommand.isRememberEmail()) {
+			if (loginCommand.isRememberId()) {
 				rememberCookie.setMaxAge(60 * 60 * 24 * 30);
 			} else {
 				rememberCookie.setMaxAge(0);
