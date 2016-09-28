@@ -29,15 +29,13 @@
 					<label for="user_login" class="sr-only">ID : 
 					<input type="text" name="id" id="id" class="form-control" placeholder="id"/>
 				</div>	
-					
-					</label>&nbsp;&nbsp;&nbsp;&nbsp; <label>비밀번호 :
-				
-				<input type="password" name="password" id="password" /></label><br>
-				
 				<label>ID 기억
 				
 				<input type="checkbox" name="rememberId" id="rememberID"/>
-				</label> 
+				</label> 					
+					</label>&nbsp;&nbsp;&nbsp;&nbsp; <label>비밀번호 :
+				
+				<input type="password" name="password" id="password" /></label><br>								
 				<input type="submit" value="로그인">
 			</c:if>
 			<c:if test="${! empty cookie.REMEMBER.value}">
