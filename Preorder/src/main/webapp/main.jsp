@@ -12,8 +12,8 @@
 
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/css/main.css" />
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/css/reset.css" />
+<%-- <link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/reset.css" /> --%>
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/css/style.css" />
 <link rel="stylesheet" type="text/css"
@@ -29,6 +29,7 @@
 	
 	
 </head> 
+<body>
 	<%@include file="/include/header.jsp"%>
 	<c:if test="${empty authInfo }">
 		<%@include file="/dirMem/join.jsp"%>
@@ -38,7 +39,6 @@
 	</c:if>
 	<%@include file="/include/footer.jsp"%>
 	
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>	
+	
 </body>
 </html>

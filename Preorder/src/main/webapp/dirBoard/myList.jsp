@@ -64,15 +64,6 @@
 
 		<section id="main-content">
 			<div id="featured">
-			<div class="form-group">
-  				<label for="sel1">Select list:</label>
- 				 <select class="form-control" id="sel1">
-   					<option>1</option>
-    				<option>2</option>
-    				<option>3</option>
-    			    <option>4</option>
-  				</select>
-			</div>
 				<h3>Featured Article :</h3>
 				<p>
 					Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
@@ -151,20 +142,7 @@
 			<div id="about">
 				<h3>About</h3>
 				<p>
-					Integer posuere erat a ante venenatis dapibus posuere velit
-					aliquet. Praesent commodo cursus magna, vel scelerisque nisl
-					consectetur et. Praesent commodo cursus magna, vel scelerisque nisl
-					consectetur et. Maecenas sed diam eget risus varius blandit sit
-					amet non magna. Cras justo odio, dapibus ac facilisis in, egestas
-					eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at
-					eros. Donec id elit non mi porta gravida at eget metus.<br /> <br />
-					Sed posuere consectetur est at lobortis. Praesent commodo cursus
-					magna, vel scelerisque nisl consectetur et. Curabitur blandit
-					tempus porttitor. Donec sed odio dui. Cum sociis natoque penatibus
-					et magnis dis parturient montes, nascetur ridiculus mus. Sed
-					posuere consectetur est at lobortis. Fusce dapibus, tellus ac
-					cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
-					justo sit amet risus.
+					
 				</p>
 			</div>
 		</section>

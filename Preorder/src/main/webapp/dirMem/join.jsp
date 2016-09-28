@@ -113,54 +113,6 @@
 							<input type="submit" value="회원가입" class="btn" />
 						</div>
 						</form:form>
-						<form:form commandName="registerRequest" action="member/regist" class="form-horizontal" role="form">																											
-						<div class="form-group">													
-								<label class="col-sm-2 control-label">Email</label>
-								<div class="col-sm-6">
-								 <form:input path="email"
-										class="form-control" id="focusedInput" type="text" value="Email" />
-								<form:errors path="email" />							
-								</div>
-							</div>
-							
-								 
-								 
-							
-						<div class="form-group">	
-								<label class="col-sm-2 control-label">Id</label> 
-								<div class="col-sm-6">
-								<form:input path="id" class="form-control" id="focusedInput" type="text" value="ID" />
-								<form:errors path="id"/>								
-								</div>
-						</div>
-						<div class="form-group">								
-								<label class="col-sm-2 control-label">이름</label>
-								<div class="col-sm-6">
-								<form:input path="name" class="form-control" id="focusedInput" type="text" value="Name" />
-								<form:errors path="name" />
-						</div>
-						</div>
-							<div class="form-group">	
-								<label class="col-sm-2 control-label">비번</label>
-								<div class="col-sm-6">
-								<form:password path="password" class="form-control" id="focusedInput"  value="password" />
-								<form:errors path="password" />
-								</div>
-							</div>
-							
-							<div class="form-group">	
-								<label class="col-sm-2 control-label">확인:</label> 
-								<div class="col-sm-6">
-								<form:password path="confirmPassword"  class="form-control" id="focusedInput"  value="password" /> 
-								<form:errors path="confirmPassword" />
-								</div>									
-							</div>
-							
-							<input type="submit" value="회원가입" class="btn" />
-						</div>
-						</form:form>
-						
-						
 						
 						
 					
@@ -170,8 +122,8 @@
 			</div>
 			</h2>
 				<nav>
-				<a href="#">Home</a> <a href="#">음식점 찾기</a> <a href="#">음식점 현황 </a>
-				<a href="#">-</a> <a href="#">-</a>
+				<a href="#">Home</a> <a href="#">About</a> <a href="#">Portfolio</a>
+				<a href="#">Blog</a> <a href="#">Contact</a>
 				<div class="clearfix"></div>
 			</nav>
 
