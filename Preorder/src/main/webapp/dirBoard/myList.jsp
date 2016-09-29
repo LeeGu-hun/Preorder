@@ -46,8 +46,15 @@
 	<div id="wrapper">
 
 		<header>
+			
+
+
+
 			<!--★★★ 회원가입 만들어 봄 ★★★★★★  -->
 			<!-- 회원가입 폼 : S -->
+
+			
+
 			<nav>
 				<a href="#">Home</a> <a href="#">About</a> <a href="#">Portfolio</a>
 				<a href="#">Blog</a> <a href="#">Contact</a>
@@ -56,31 +63,40 @@
 		</header>
 
 		<section id="main-content">
-			<div id="featured ">
-			
+			<div id="featured">
 				<div class="container">
-			
-					<h2>지역 선택</h2>
-					<form class="form-inline" role="form">
-    <div class="form-group">	
-					<select class="col-md-2">
-						<option>지역선택</option>
-						<option>대전</option>
-						<option>대구</option>
-						<option>부산</option>						
-					</select>
-					
-					<select class="col-md-1">
-						<option>구</option>
-						<option>대전</option>
-						<option>대구</option>
-						<option>부산</option>						
-					</select>
-					<input placeholder="가격"/>~<input placeholder="가격"/>
-					<button >검색</button>
-					</
-					</div>	
-				</div>
+  <h2>메뉴 찾기</h2>
+  <form class="form-inline" role="form" action="searchFood">
+    <div class="form-group">
+      <label for="focusedInput">지역선택</label>
+      <select id="disabledSelect" class="form-control">
+            <option>전국</option>
+            <option>서울</option>
+            <option>부산</option>           
+            <option>대구</option>
+            <option>인천</option>
+            <option>광주</option> 
+            <option>대전</option> 
+            <option>울산</option> 
+            <option>세종</option>
+            <option>경기</option>
+            <option>강원</option>
+            <option>충북</option>
+            <option>충남</option>                 
+            <option>전북</option> 
+            <option>전남</option> 
+            <option>경북</option> 
+            <option>경남</option> 
+            <option>제주</option> 
+       </select>
+    	<input type="text" class="form-control" placeholder="메뉴명 입력">
+       <input type="text" class="form-control" placeholder="가격">~
+       <input type="text" class="form-control" placeholder="가격">
+       <input type="button"  class="btn " 
+		value="검색" onclick="" >
+    </div>
+  </form>
+</div>
 			</div>
 			<!-- END Featured -->
 			<hr />
@@ -150,11 +166,13 @@
 			<hr />
 			<div id="about">
 				<h3>About</h3>
-				<p></p>
+				<p>
+					
+				</p>
 			</div>
 		</section>
 		<hr />
-
+		
 
 	</div>
 	<!-- END Wrapper -->

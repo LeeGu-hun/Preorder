@@ -2,11 +2,11 @@ package bean;
 
 import java.sql.Date;
 
-public class Restaurnt {
+public class Store {
 	private String id, password, location, address, tel, m_id, pos_id;
 	private Date regdate;
 	
-	public Restaurnt(String id, String password, String location, String address, String tel, String m_id,
+	public Store(String id, String password, String location, String address, String tel, String m_id,
 			String pos_id, Date regdate) {
 		this.id = id;
 		this.password = password;

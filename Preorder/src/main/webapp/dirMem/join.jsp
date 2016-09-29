@@ -35,7 +35,15 @@
 	<![endif]-->
 <script>
  	
-	function openLayer() {	$('#contents').toggle();	}
+function openLayer() {	$('#contents').toggle();	}
+function openNormal() {		/* $('#companyForm').toggle();	 */
+		 $('#normalForm').css("display","block"); 
+		 $('#companyForm').css("display","none");
+}
+function openCompany() {	/* $('#normalForm').toggle();	 */
+		 $('#companyForm').css("display","block");
+		 $('#normalForm').css("display","none"); 
+}
 </script>
 </head>
 
@@ -61,12 +69,62 @@
 				<div id="mainRight">
 					<div id="rightWrap" >
 						<input type="button" id="wp-join" class="btn" 
-						value="일반회원" onclick="openjoin();" >
+						value="일반회원" onclick="openNormal();" >
 						<input type="button" id="wp-join" class="btn" 
-						value="기업회원" onclick="openjoin();" >
-						<h2>일반회원</h2>
+						value="기업회원" onclick="openCompany();" >
+						
   				
    						 </div>
+   						 <div id="normalForm" >
+   						 <h2>일반회원</h2>
+						<form:form commandName="registerRequest" action="member/regist" class="form-horizontal" role="form">																											
+						<div class="form-group">													
+								<label class="col-sm-2 control-label">Email</label>
+								<div class="col-sm-6">
+								 <form:input path="email"
+										class="form-control" id="focusedInput" type="text" value="Email" />
+								<form:errors path="email" />							
+								</div>
+							</div>
+							
+								 
+								 
+							
+						<div class="form-group">	
+								<label class="col-sm-2 control-label">Id</label> 
+								<div class="col-sm-6">
+								<form:input path="id" class="form-control" id="focusedInput" type="text" value="ID" />
+								<form:errors path="id"/>								
+								</div>
+						</div>
+						<div class="form-group">								
+								<label class="col-sm-2 control-label">이름</label>
+								<div class="col-sm-6">
+								<form:input path="name" class="form-control" id="focusedInput" type="text" value="Name" />
+								<form:errors path="name" />
+						</div>
+						</div>
+							<div class="form-group">	
+								<label class="col-sm-2 control-label">비번</label>
+								<div class="col-sm-6">
+								<form:password path="password" class="form-control" id="focusedInput"  value="password" />
+								<form:errors path="password" />
+								</div>
+							</div>
+							
+							<div class="form-group">	
+								<label class="col-sm-2 control-label">확인:</label> 
+								<div class="col-sm-6">
+								<form:password path="confirmPassword"  class="form-control" id="focusedInput"  value="password" /> 
+								<form:errors path="confirmPassword" />
+								</div>									
+							</div>
+							
+							<input type="submit" value="회원가입" class="btn" />
+						</div>
+						</form:form>
+						</div>
+						<div id="companyForm" style="display:none;">
 						<form:form commandName="registerRequest" action="member/regist" class="form-horizontal" role="form">																											
 						<div class="form-group">													
 								<label class="col-sm-2 control-label">Email</label>
@@ -114,11 +172,12 @@
 						</div>
 						</form:form>
 						
+						</div>
+						
 						
 					
 				</div>
-				<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+			
 			</div>
 			</h2>
 				<nav>

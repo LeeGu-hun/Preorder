@@ -10,8 +10,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Welcome</title>
 
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/css/main.css" />
+<%-- <link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/css/main.css" /> --%>
 <%-- <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/css/reset.css" /> --%>
 <link rel="stylesheet" type="text/css"
@@ -42,7 +42,7 @@
 	<c:if test="${! empty authInfo }">
 		<%@include file="/dirBoard/myList.jsp"%>
 	</c:if>
-	<%@include file="/include/footer.jsp"%>
+<%-- 	<%@include file="/include/footer.jsp"%> --%>
 	
 	
 </body>
