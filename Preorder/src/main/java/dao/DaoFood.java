@@ -17,7 +17,7 @@ public class DaoFood {
 	public DaoFood(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
-	public Member selectById(String id) {
+	public Member selectByCustome(String id) {
 		List<Member> results = jdbcTemplate.query(
 				"select * from MEMBER where id = ?", 
 				new RowMapper<Member>() {
