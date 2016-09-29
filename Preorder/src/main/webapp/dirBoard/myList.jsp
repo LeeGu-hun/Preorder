@@ -46,15 +46,8 @@
 	<div id="wrapper">
 
 		<header>
-			
-
-
-
 			<!--★★★ 회원가입 만들어 봄 ★★★★★★  -->
 			<!-- 회원가입 폼 : S -->
-
-			
-
 			<nav>
 				<a href="#">Home</a> <a href="#">About</a> <a href="#">Portfolio</a>
 				<a href="#">Blog</a> <a href="#">Contact</a>
@@ -63,15 +56,31 @@
 		</header>
 
 		<section id="main-content">
-			<div id="featured">
-				<h3>Featured Article :</h3>
-				<p>
-					Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-					auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at
-					eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> <a
-						href="#">Continue Reading &rarr;</a>
-				</p>
+			<div id="featured ">
+			
+				<div class="container">
+			
+					<h2>지역 선택</h2>
+					<form class="form-inline" role="form">
+    <div class="form-group">	
+					<select class="col-md-2">
+						<option>지역선택</option>
+						<option>대전</option>
+						<option>대구</option>
+						<option>부산</option>						
+					</select>
+					
+					<select class="col-md-1">
+						<option>구</option>
+						<option>대전</option>
+						<option>대구</option>
+						<option>부산</option>						
+					</select>
+					<input placeholder="가격"/>~<input placeholder="가격"/>
+					<button >검색</button>
+					</
+					</div>	
+				</div>
 			</div>
 			<!-- END Featured -->
 			<hr />
@@ -141,13 +150,11 @@
 			<hr />
 			<div id="about">
 				<h3>About</h3>
-				<p>
-					
-				</p>
+				<p></p>
 			</div>
 		</section>
 		<hr />
-		
+
 
 	</div>
 	<!-- END Wrapper -->
