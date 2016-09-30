@@ -50,7 +50,7 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 <body id="home">
 	
 
-	<div id="wrapper">
+	<div id="wrapper" >
 
 		
 
@@ -82,7 +82,7 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 								<label class="col-sm-2 control-label">Email</label>
 								<div class="col-sm-6">
 								 <form:input path="email"
-										class="form-control" id="focusedInput" type="text" value="Email" />
+										class="form-control" id="focusedInput" type="text" placeholder="Email" />
 								<form:errors path="email" />							
 								</div>
 							</div>
@@ -93,21 +93,21 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 						<div class="form-group">	
 								<label class="col-sm-2 control-label">Id</label> 
 								<div class="col-sm-6">
-								<form:input path="id" class="form-control" id="focusedInput" type="text" value="ID" />
+								<form:input path="id" class="form-control" id="focusedInput" type="text" placeholder="ID" />
 								<form:errors path="id"/>								
 								</div>
 						</div>
 						<div class="form-group">								
 								<label class="col-sm-2 control-label">이름</label>
 								<div class="col-sm-6">
-								<form:input path="name" class="form-control" id="focusedInput" type="text" value="Name" />
+								<form:input path="name" class="form-control" id="focusedInput" type="text" placeholder="Name" />
 								<form:errors path="name" />
 						</div>
 						</div>
 							<div class="form-group">	
 								<label class="col-sm-2 control-label">비번</label>
 								<div class="col-sm-6">
-								<form:password path="password" class="form-control" id="focusedInput"  value="password" />
+								<form:password path="password" class="form-control" id="focusedInput"  placeholder="password" />
 								<form:errors path="password" />
 								</div>
 							</div>
@@ -115,7 +115,7 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 							<div class="form-group">	
 								<label class="col-sm-2 control-label">확인:</label> 
 								<div class="col-sm-6">
-								<form:password path="confirmPassword"  class="form-control" id="focusedInput"  value="password" /> 
+								<form:password path="confirmPassword"  class="form-control" id="focusedInput"  placeholder="password" /> 
 								<form:errors path="confirmPassword" />
 								</div>									
 							</div>
@@ -125,12 +125,13 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 						</form:form>
 						</div>
 						<div id="companyForm" style="display:none;">
+						<h2>기업회원</h2>
 						<form:form commandName="registerRequest" action="member/regist" class="form-horizontal" role="form">																											
 						<div class="form-group">													
 								<label class="col-sm-2 control-label">Email</label>
 								<div class="col-sm-6">
 								 <form:input path="email"
-										class="form-control" id="focusedInput" type="text" value="Email" />
+										class="form-control" id="focusedInput" type="text" placeholder="Email" />
 								<form:errors path="email" />							
 								</div>
 							</div>
@@ -141,21 +142,21 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 						<div class="form-group">	
 								<label class="col-sm-2 control-label">Id</label> 
 								<div class="col-sm-6">
-								<form:input path="id" class="form-control" id="focusedInput" type="text" value="ID" />
+								<form:input path="id" class="form-control" id="focusedInput" type="text" placeholder="ID" />
 								<form:errors path="id"/>								
 								</div>
 						</div>
 						<div class="form-group">								
 								<label class="col-sm-2 control-label">이름</label>
 								<div class="col-sm-6">
-								<form:input path="name" class="form-control" id="focusedInput" type="text" value="Name" />
+								<form:input path="name" class="form-control" id="focusedInput" type="text" placeholder="Name" />
 								<form:errors path="name" />
 						</div>
 						</div>
 							<div class="form-group">	
 								<label class="col-sm-2 control-label">비번</label>
 								<div class="col-sm-6">
-								<form:password path="password" class="form-control" id="focusedInput"  value="password" />
+								<form:password path="password" class="form-control" id="focusedInput"  placeholder="password" />
 								<form:errors path="password" />
 								</div>
 							</div>
@@ -163,7 +164,7 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 							<div class="form-group">	
 								<label class="col-sm-2 control-label">확인:</label> 
 								<div class="col-sm-6">
-								<form:password path="confirmPassword"  class="form-control" id="focusedInput"  value="password" /> 
+								<form:password path="confirmPassword"  class="form-control" id="focusedInput"  placeholder="password" /> 
 								<form:errors path="confirmPassword" />
 								</div>									
 							</div>

@@ -1,7 +1,37 @@
 package member;
 
 public class RegisterRequest {
-	private String id, password, confirmPassword, name, phone, email;
+	private String id, password, confirmPassword, name, phone, email, location, address, tel, m_id, pos_id;
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	public String getM_id() {
+		return m_id;
+	}
+	public void setM_id(String m_id) {
+		this.m_id = m_id;
+	}
+	public String getPos_id() {
+		return pos_id;
+	}
+	public void setPos_id(String pos_id) {
+		this.pos_id = pos_id;
+	}
 	private String[] arr ={"홍길동","환영"};
 	private String word = "홍길동, 환영";
 	public String getId() {
