@@ -50,7 +50,7 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 <body id="home">
 	
 
-	<div id="wrapper" >
+	<div id="wrapper">
 
 		
 
@@ -127,24 +127,26 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 						<div id="companyForm" style="display:none;">
 						<h2>기업회원</h2>
 						<form:form commandName="registerRequest" action="member/regist" class="form-horizontal" role="form">																											
+						
 						<div class="form-group">													
 								<label class="col-sm-2 control-label">Email</label>
-								<div class="col-sm-6">
-								 <form:input path="email"
-										class="form-control" id="focusedInput" type="text" placeholder="Email" />
+							<div class="col-sm-6">
+								<form:input path="email" class="form-control" id="focusedInput" type="text" placeholder="Email" />
 								<form:errors path="email" />							
 								</div>
-							</div>
-							
-								 
-								 
-							
+							</div>							
 						<div class="form-group">	
 								<label class="col-sm-2 control-label">Id</label> 
 								<div class="col-sm-6">
 								<form:input path="id" class="form-control" id="focusedInput" type="text" placeholder="ID" />
 								<form:errors path="id"/>								
 								</div>
+						</div>
+						<div class="form-group">								
+								<label class="col-sm-2 control-label">이름</label>
+								<div class="col-sm-6">
+								<form:input path="name" class="form-control" id="focusedInput" type="text" placeholder="Name" />
+								<form:errors path="name" />
 						</div>
 						<div class="form-group">								
 								<label class="col-sm-2 control-label">이름</label>
