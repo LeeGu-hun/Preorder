@@ -32,6 +32,10 @@ import member.RegisterRequestValidator;
 @RequestMapping("/member")
 public class ControllerMember {
 	private DaoMember daoMember;
+	
+	
+	
+
 	private MemberRegisterService memberRegisterService;
 	private ChangePasswordService changePasswordService;
 	private AuthService authService;
@@ -42,6 +46,7 @@ public class ControllerMember {
 	public void setDaoMember(DaoMember daoMember) {
 		this.daoMember= daoMember;
 	}
+	
 	public void setMemberRegisterService(
 			MemberRegisterService memberRegisterService) {
 		this.memberRegisterService = memberRegisterService;
@@ -57,6 +62,7 @@ public class ControllerMember {
 		if (errors.hasErrors())
 			return "main";
 		try {
+			memberRegisterService.registStore(rr);
 			memberRegisterService.regist(rr);
 //			AuthInfo authInfo = authService.authenticate(
 //					rr.getEmail(), rr.getPassword());

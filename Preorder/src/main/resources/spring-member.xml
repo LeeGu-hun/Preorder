@@ -23,6 +23,7 @@
 	<bean id="daoMember" class="dao.DaoMember">
 		<constructor-arg ref="dataSource" />
 	</bean>
+
 	
 	<bean id="changePwdSvc" class="member.ChangePasswordService">
 		<constructor-arg ref="daoMember" />

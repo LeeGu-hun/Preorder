@@ -11,6 +11,8 @@
 	
 	<bean class="controller.ControllerMember">
 		<property name="daoMember" ref="daoMember" />
+		
+		
 		<property name="authService" ref="authService" />
 		<property name="changePasswordService" ref="changePwdSvc" />
 		<property name="memberRegisterService" ref="memberRegSvc" />

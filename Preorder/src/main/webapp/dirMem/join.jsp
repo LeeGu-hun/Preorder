@@ -93,21 +93,21 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 						<div class="form-group">	
 								<label class="col-sm-2 control-label">Id</label> 
 								<div class="col-sm-6">
-								<form:input path="id" class="form-control" id="focusedInput" type="text" placeholder="ID" />
+								<form:input path="id" class="form-control" id="focusedInput" type="text" value="ID" />
 								<form:errors path="id"/>								
 								</div>
 						</div>
 						<div class="form-group">								
 								<label class="col-sm-2 control-label">이름</label>
 								<div class="col-sm-6">
-								<form:input path="name" class="form-control" id="focusedInput" type="text" placeholder="Name" />
+								<form:input path="name" class="form-control" id="focusedInput" type="text" value="Name" />
 								<form:errors path="name" />
 						</div>
 						</div>
 							<div class="form-group">	
 								<label class="col-sm-2 control-label">비번</label>
 								<div class="col-sm-6">
-								<form:password path="password" class="form-control" id="focusedInput"  placeholder="password" />
+								<form:password path="password" class="form-control" id="focusedInput"  value="password" />
 								<form:errors path="password" />
 								</div>
 							</div>
@@ -127,14 +127,18 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 						<div id="companyForm" style="display:none;">
 						<h2>기업회원</h2>
 						<form:form commandName="registerRequest" action="member/regist" class="form-horizontal" role="form">																											
-						
 						<div class="form-group">													
 								<label class="col-sm-2 control-label">Email</label>
-							<div class="col-sm-6">
-								<form:input path="email" class="form-control" id="focusedInput" type="text" placeholder="Email" />
+								<div class="col-sm-6">
+								 <form:input path="email"
+										class="form-control" id="focusedInput" type="text" placeholder = "Email" />
 								<form:errors path="email" />							
 								</div>
-							</div>							
+							</div>
+							
+								 
+								 
+							
 						<div class="form-group">	
 								<label class="col-sm-2 control-label">Id</label> 
 								<div class="col-sm-6">
@@ -143,33 +147,55 @@ function openCompany() {	/* $('#normalForm').toggle();	 */
 								</div>
 						</div>
 						<div class="form-group">								
-								<label class="col-sm-2 control-label">이름</label>
-								<div class="col-sm-6">
-								<form:input path="name" class="form-control" id="focusedInput" type="text" placeholder="Name" />
-								<form:errors path="name" />
+								<label class="col-sm-2 control-label">식당종류</label>
+							<div class="col-sm-6">
+								<form:select path="category" class="form-control" id="focusedInput" type="text" placeholder="name">
+								<option>일반 음식점</option>
+								<option>패스트 푸드</option>
+								</form:select>
+								
+							</div>
 						</div>
 						<div class="form-group">								
-								<label class="col-sm-2 control-label">이름</label>
-								<div class="col-sm-6">
-								<form:input path="name" class="form-control" id="focusedInput" type="text" placeholder="Name" />
-								<form:errors path="name" />
+								<label class="col-sm-2 control-label">식당명</label>
+							<div class="col-sm-6">
+								<form:input path="name" class="form-control" id="focusedInput" type="text" placeholder="식당명"  />
+								
+							</div>
 						</div>
+						<div class="form-group">								
+								<label class="col-sm-2 control-label">주소</label>
+							<div class="col-sm-6">
+								<form:input path="address" class="form-control" id="focusedInput" type="text" placeholder="주소"  />
+								
+							</div>
+							<button>주소찾기</button>
 						</div>
-							<div class="form-group">	
-								<label class="col-sm-2 control-label">비번</label>
-								<div class="col-sm-6">
+						
+								
+						<div class="form-group">								
+								<label class="col-sm-2 control-label">전화번호</label>
+							<div class="col-sm-6">
+								<form:input path="tel" class="form-control" id="focusedInput" type="text" placeholder="tel" />
+								
+							</div>
+						</div>
+						
+						<div class="form-group">	
+								<label class="col-sm-2 control-label">비밀번호</label>
+							<div class="col-sm-6">
 								<form:password path="password" class="form-control" id="focusedInput"  placeholder="password" />
 								<form:errors path="password" />
-								</div>
 							</div>
+						</div>
 							
-							<div class="form-group">	
-								<label class="col-sm-2 control-label">확인:</label> 
-								<div class="col-sm-6">
-								<form:password path="confirmPassword"  class="form-control" id="focusedInput"  placeholder="password" /> 
+						<div class="form-group">	
+								<label class="col-sm-2 control-label">비밀번호 확인</label>
+							<div class="col-sm-6">
+								<form:password path="confirmPassword"  class="form-control" id="focusedInput" placeholder="password" /> 
 								<form:errors path="confirmPassword" />
-								</div>									
-							</div>
+							</div>									
+						</div>
 							
 							<input type="submit" value="회원가입" class="btn" />
 						</div>

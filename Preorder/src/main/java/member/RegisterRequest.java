@@ -1,7 +1,14 @@
 package member;
 
 public class RegisterRequest {
-	private String id, password, confirmPassword, name, phone, email, location, address, tel, m_id, pos_id;
+	private String id, password, confirmPassword, name, phone, 
+					email, location, address, tel, m_id, pos_id, category;
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
 	public String getLocation() {
 		return location;
 	}
