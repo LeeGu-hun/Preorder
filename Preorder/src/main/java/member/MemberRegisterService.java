@@ -24,9 +24,10 @@ public class MemberRegisterService {
 		if (store != null) {
 			throw new AlreadyExistingMemberException("dup i " + req.getId());
 		}
-		Store newstore = new Store(req.getId(), req.getPassword(), req.getLocation(),req.getAddress(), req.getTel(),
-								req.getM_id(),req.getPos_id(),req.getName(),req.getPhone(),
-								req.getEmail(),req.getCategory(),new Date());	
+		Store newstore = new Store(req.getId(), req.getPassword(), req.getLocation(), 
+				req.getAddress(), req.getTel(), req.getStore_name(), req.getCategory(), 
+				req.getCeo_num(), req.getRegdate(), 
+				req.getStore_id(), req.getMax_waiting());	
 		
 		//String id, String password, String location, String address, String tel, String m_id, String pos_id,
 		//String confirmPassword, String name, String phone, String email, String category, Date regdate

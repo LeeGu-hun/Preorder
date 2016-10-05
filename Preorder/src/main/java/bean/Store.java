@@ -3,58 +3,36 @@ package bean;
 import java.util.Date;
 
 public class Store {
-	private String id, password, location, address, tel, m_id, pos_id, 
-	 name, phone,email, category;
+	private String id, password, location, address, tel, store_name, category, ceo_num;
 	private Date regdate;
-
-	
-
-
-
-	
-
-
-
-	public Store(String id, String password, String location, String address, String tel, String m_id, String pos_id,
-			String name, String phone, String email, String category, Date regdate) {
-		super();
+	private int store_id, max_waiting;
+	public Store(String id, String password, String location, String address, String tel, String store_name,
+			String category, String ceo_num, Date regdate, int store_id, int max_waiting) {
 		this.id = id;
 		this.password = password;
 		this.location = location;
 		this.address = address;
 		this.tel = tel;
-		this.m_id = m_id;
-		this.pos_id = pos_id;
-		this.name = name;
-		this.phone = phone;
-		this.email = email;
+		this.store_name = store_name;
 		this.category = category;
+		this.ceo_num = ceo_num;
 		this.regdate = regdate;
+		this.store_id = store_id;
+		this.max_waiting = max_waiting;
 	}
 	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getCategory() {
-		return category;
-	}
-	public void setCategory(String category) {
+	public Store(String id, String password, String location, String address, String tel, String store_name,
+			String category, String ceo_num, Date regdate, int max_waiting) {
+		this.id = id;
+		this.password = password;
+		this.location = location;
+		this.address = address;
+		this.tel = tel;
+		this.store_name = store_name;
 		this.category = category;
+		this.ceo_num = ceo_num;
+		this.regdate = regdate;
+		this.max_waiting = max_waiting;
 	}
 
 	public String getId() {
@@ -87,17 +65,23 @@ public class Store {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	public String getM_id() {
-		return m_id;
+	public String getStore_name() {
+		return store_name;
 	}
-	public void setM_id(String m_id) {
-		this.m_id = m_id;
+	public void setStore_name(String store_name) {
+		this.store_name = store_name;
 	}
-	public String getPos_id() {
-		return pos_id;
+	public String getCategory() {
+		return category;
 	}
-	public void setPos_id(String pos_id) {
-		this.pos_id = pos_id;
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public String getCeo_num() {
+		return ceo_num;
+	}
+	public void setCeo_num(String ceo_num) {
+		this.ceo_num = ceo_num;
 	}
 	public Date getRegdate() {
 		return regdate;
@@ -105,9 +89,16 @@ public class Store {
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
-
-	
-
-	
-	
+	public int getStore_id() {
+		return store_id;
+	}
+	public void setStore_id(int store_id) {
+		this.store_id = store_id;
+	}
+	public int getMax_waiting() {
+		return max_waiting;
+	}
+	public void setMax_waiting(int max_waiting) {
+		this.max_waiting = max_waiting;
+	}
 }

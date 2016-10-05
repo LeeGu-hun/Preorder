@@ -45,10 +45,9 @@ public class DaoMember {
 				new RowMapper<Store>() {
 			public Store mapRow(ResultSet rs, int rowNum) 
 					throws SQLException {
-				Store store = new Store(rs.getString("id"), rs.getString("password"),rs.getString("location"),
-						rs.getString("address"),rs.getString("tel"),rs.getString("m_id"),rs.getString("pos_id"),
-						rs.getString("name"),rs.getString("phone"),rs.getString("email"),rs.getString("category"),
-						rs.getDate("regdate"));
+				Store store = new Store(rs.getString("id"), rs.getString("password"), rs.getString("location"), 
+						rs.getString("address"), rs.getString("tel"), rs.getString("store_name"), rs.getString("category"), 
+						rs.getString("ceo_num"), rs.getDate("regdate"), rs.getInt("store_id"), rs.getInt("max_waiting"));
 				store.setId(rs.getString("ID"));
 				return store;
 			}
@@ -56,7 +55,6 @@ public class DaoMember {
 
 		return results.isEmpty() ? null : results.get(0);
 	}
-	//회원 정보 전체 select
 
 	public void insert(final Member member) {
 		jdbcTemplate.update(new PreparedStatementCreator() {
@@ -85,15 +83,13 @@ public class DaoMember {
 									+ "values (store_num.nextval, ?, ?, ?, ?, ?, ?, ?, ?)");
 				pstmt.setString(1, store.getId());
 				pstmt.setString(2, store.getPassword());
-				pstmt.setString(3, store.getName());
+				pstmt.setString(3, store.getStore_name());
 				pstmt.setString(4, store.getLocation());
 				pstmt.setString(5, store.getAddress());				
 				pstmt.setString(6, store.getTel());
 				pstmt.setTimestamp(7, new Timestamp(store.getRegdate().getTime()));
 				pstmt.setString(8, store.getCategory());
-			
 				
-								
 				return pstmt;
 			}
 		});

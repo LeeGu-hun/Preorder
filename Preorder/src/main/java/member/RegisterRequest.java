@@ -1,8 +1,42 @@
 package member;
 
+import java.util.Date;
+
 public class RegisterRequest {
 	private String id, password, confirmPassword, name, phone, 
-					email, location, address, tel, m_id, pos_id, category;
+					email, location, address, tel, category, store_name, ceo_num;
+	private int store_id, max_waiting;
+	private Date regdate;
+	public Date getRegdate() {
+		return regdate;
+	}
+	public void setRegdate(Date regdate) {
+		this.regdate = regdate;
+	}
+	public String getStore_name() {
+		return store_name;
+	}
+	public void setStore_name(String store_name) {
+		this.store_name = store_name;
+	}
+	public String getCeo_num() {
+		return ceo_num;
+	}
+	public void setCeo_num(String ceo_num) {
+		this.ceo_num = ceo_num;
+	}
+	public int getStore_id() {
+		return store_id;
+	}
+	public void setStore_id(int store_id) {
+		this.store_id = store_id;
+	}
+	public int getMax_waiting() {
+		return max_waiting;
+	}
+	public void setMax_waiting(int max_waiting) {
+		this.max_waiting = max_waiting;
+	}
 	public String getCategory() {
 		return category;
 	}
@@ -27,20 +61,6 @@ public class RegisterRequest {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	public String getM_id() {
-		return m_id;
-	}
-	public void setM_id(String m_id) {
-		this.m_id = m_id;
-	}
-	public String getPos_id() {
-		return pos_id;
-	}
-	public void setPos_id(String pos_id) {
-		this.pos_id = pos_id;
-	}
-	private String[] arr ={"홍길동","환영"};
-	private String word = "홍길동, 환영";
 	public String getId() {
 		return id;
 	}
@@ -65,18 +85,6 @@ public class RegisterRequest {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String[] getArr() {
-		return arr;
-	}
-	public void setArr(String[] arr) {
-		this.arr = arr;
-	}
-	public String getWord() {
-		return word;
-	}
-	public void setWord(String word) {
-		this.word = word;
-	}
 	public String getPhone() {
 		return phone;
 	}
@@ -92,7 +100,4 @@ public class RegisterRequest {
 	public boolean isPasswordEqualToConfirmPassword() {
 		return password.equals(confirmPassword)?true:false;
 	}
-	
-	
-
 }

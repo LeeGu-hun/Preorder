@@ -1,24 +1,51 @@
 package bean;
 
-import java.sql.Timestamp;
+import java.sql.Time;
 import java.util.Date;
 public class Menu {
-	private String category, foodmenu, review, price, m_id;
-	private int rating;
+	private String category, foodmenu, review, file;
+	private int rating, price, menu_no, store_no;
 	private Date regdate;
-	private Timestamp cooktime;
-
-	public Menu(String category, String foodmenu, String review, String price, String m_id, int rating, Date regdate,
-			Timestamp cooktime) {
+	private Time cooktime;
+	
+	public Menu(String category, String foodmenu, String review, String file, int rating, int price, int menu_no,
+			int store_no, Date regdate, Time cooktime) {
 		this.category = category;
 		this.foodmenu = foodmenu;
-		this.price = price;
-		this.m_id = m_id;
+		this.review = review;
+		this.file = file;
 		this.rating = rating;
+		this.price = price;
+		this.menu_no = menu_no;
+		this.store_no = store_no;
 		this.regdate = regdate;
 		this.cooktime = cooktime;
 	}
 
+	public String getFile() {
+		return file;
+	}
+
+	public void setFile(String file) {
+		this.file = file;
+	}
+
+	public int getMenu_no() {
+		return menu_no;
+	}
+
+	public void setMenu_no(int menu_no) {
+		this.menu_no = menu_no;
+	}
+
+	public int getStore_no() {
+		return store_no;
+	}
+
+	public void setStore_no(int store_no) {
+		this.store_no = store_no;
+	}
+	
 	public String getCategory() {
 		return category;
 	}
@@ -43,20 +70,12 @@ public class Menu {
 		this.review = review;
 	}
 
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
-	}
-
-	public String getM_id() {
-		return m_id;
-	}
-
-	public void setM_id(String m_id) {
-		this.m_id = m_id;
 	}
 
 	public int getRating() {
@@ -75,11 +94,11 @@ public class Menu {
 		this.regdate = regdate;
 	}
 
-	public Timestamp getCooktime() {
+	public Time getCooktime() {
 		return cooktime;
 	}
 
-	public void setCooktime(Timestamp cooktime) {
+	public void setCooktime(Time cooktime) {
 		this.cooktime = cooktime;
 	}
 	
