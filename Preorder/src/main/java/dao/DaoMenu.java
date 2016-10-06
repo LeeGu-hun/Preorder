@@ -11,22 +11,23 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
 import bean.Menu;
+import member.MenuCommand;
 public class DaoMenu {
 	private JdbcTemplate jdbcTemplate;
 
 	public DaoMenu(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
-	public void insert(final Menu menu){
+	public void insert(final MenuCommand menuCommand){
 		jdbcTemplate.update(new PreparedStatementCreator() {
 			public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
 				PreparedStatement pstmt = con.prepareStatement(
 						"insert into menu(menu_no, store_no, category, foodmenu, price, regdate, foodimg) values (menu_num.nextval, ?, ?, ?, ?, ?)");
-				pstmt.setString(1, menu.getCategory());
-				pstmt.setString(2, menu.getFoodmenu());
-				pstmt.setInt(3, menu.getPrice());
-				pstmt.setTimestamp(4, new Timestamp(menu.getRegdate().getTime()));
-//				pstmt.set(5, menu.getFoodImage());
+				pstmt.setString(1, menuCommand.getCategory());
+				pstmt.setString(2, menuCommand.getFoodmenu());
+				pstmt.setInt(3, menuCommand.getPrice());
+				pstmt.setTimestamp(4, new Timestamp(menuCommand.getRegdate().getTime()));
+				pstmt.setString(5, menuCommand.getFoodimage());
 				return pstmt;
 			}
 		});

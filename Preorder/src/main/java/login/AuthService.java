@@ -13,7 +13,7 @@ public class AuthService {
 		this.daoMember = daoMember;
 	}
 
-	public AuthInfo authenticate(String email, String password,String id){
+	public AuthInfo authenticate(String password,String id){
 		Member member = daoMember.selectById(id);
 		if(member == null){
 			throw new MemberNotFoundException();
@@ -21,7 +21,6 @@ public class AuthService {
 		if(!member.matchPassword(password)){
 			throw new IdPasswordNotMatchingException();
 		}
-		return new 
-			AuthInfo(member.getId(), member.getEmail(), member.getName());
+		return new AuthInfo(member.getId(), member.getName());
 	}
 }
